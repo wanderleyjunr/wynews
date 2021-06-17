@@ -31,7 +31,9 @@ export default function Home({product}: IHomeProps) {
           <SubscribeButon priceId={product.priceId} />
         </section>
 
-        <img src="/images/avatar.svg" alt="Girl coding" />
+        <img 
+        src="/images/avatar.svg" 
+        alt="Girl coding" />
       </main>
     </>
   )
