@@ -1,6 +1,5 @@
 import { query as q } from "faunadb"
 import NextAuth from "next-auth"
-import { session } from "next-auth/client"
 import Providers from "next-auth/providers"
 import { fauna } from "../../../services/fauna"
 
@@ -40,8 +39,7 @@ export default NextAuth({
                 )
               )
              
-              console.log(userActiveSubscription)
-   
+  
                 return {
                     ...session,
                     activeSubscription: userActiveSubscription
@@ -77,7 +75,7 @@ export default NextAuth({
                             )
                         )
             )
-            )
+        )
                 return true
         } catch {
             return false
