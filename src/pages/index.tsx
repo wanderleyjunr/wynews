@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import { stripe } from '../services/stripe'
 import { GetStaticProps } from 'next'
+import Image from 'next/image'
 import { SubscribeButon } from '../components/SubscribeButton'
 
 import styles from './home.module.scss'
+
+import Avatar from './../../public/images/avatar.svg'
 
 interface IHomeProps {
  product:{
@@ -31,8 +34,8 @@ export default function Home({product}: IHomeProps) {
           <SubscribeButon priceId={product.priceId} />
         </section>
 
-        <img 
-        src="/images/avatar.svg" 
+        <Image 
+        src={Avatar} 
         alt="Girl coding" />
       </main>
     </>
